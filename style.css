@@ -1,0 +1,19 @@
+
+    h1 {
+        animation: color-change 0.1s infinite;
+      }
+      
+      @keyframes color-change {
+        0% { color: red; }
+        50% { color: blue; }
+        100% { color: green; }
+      }
+      body{
+        animation: color-change 0.1s infinite;
+    }
+    
+    @keyframes color-change {
+      0% { background-color: red; }
+      50% { background-color: blue; }
+      100% { background-color: green; }
+      }
